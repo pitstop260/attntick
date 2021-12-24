@@ -1,9 +1,5 @@
 :root {
-  /* Primary */
-
-  --Custom1: hsl(210, 91%, 22%);
-  --Custom2: hsl(84, 50%, 92%);
-  --Custom3: #17bebb;
+  --color1: #fff;
 }
 
 * {
@@ -11,122 +7,121 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Chau Philomene One", sans-serif;
-  color: var(--Custom1);
 }
 
 body {
-  display: grid;
-  height: auto;
-  grid-template-rows: 5% 87% 8%;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-
-header {
-  background-color: var(--SoftBlue);
-  color: var(--Custom1);
-  width: 100%;
+  background-color: hsl(290, 34%, 10%);
+  border: 1px solid black;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  grid-area: "header";
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+/* hsl(25, 43%, 79%) hsl(265, 38%, 89%)*/
 
-header p {
-  font-size: 30px;
-  padding: 12px;
-}
-
-nav img {
-  padding: 10px;
-  width: 60px;
+.logo {
+  font-size: 60px;
 }
 
 main {
-  grid-area: "main";
-  text-align: center;
+  position: relative;
+  background-color: hsl(25, 43%, 79%);
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 80%;
 }
 
-h1 {
-  color: var(--Custom1);
-  margin-top: 10px;
+main::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  border-top: 3px solid hsl(290, 34%, 10%);
+  border-left: 3px solid hsl(290, 34%, 10%);
+  border-bottom: 3px solid hsl(25, 43%, 79%);
+  border-right: 3px solid hsl(25, 43%, 79%);
+  top: 10px;
+  left: 10px;
 }
 
-#skip p {
-  text-align: center;
+main::after {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 2.7px;
+  background-color: hsl(25, 43%, 79%);
+  bottom: -3.5%;
+  left: 10px;
+  z-index: 1;
+}
+
+#adjust {
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  height: 2.7px;
+  width: 16px;
+  background-color: hsl(25, 43%, 79%);
+  top: 12%;
+  left: 89.9%;
+}
+
+#names,
+#usn {
+  /* border: 1px solid black; */
+  padding: 20px;
+  /* margin: 50px; */
+}
+
+.checkboxes {
+  position: relative;
+  padding: 20px;
+  /* border: 1px solid black; */
+}
+
+#checkbox {
+  border: none;
+  display: block;
+}
+
+.flexer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.name,
+.roll,
+.days {
   font-size: 20px;
 }
 
-#skip div {
+/* #checkboxes {
+  padding: 0%;
+} */
+
+#adjust {
+  /* border-right: 1px solid black; */
   display: flex;
-  justify-content: center;
 }
 
-#skip img {
-  width: 60px;
+.fa-unlock,
+.fa-lock {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  /* display: none; */
 }
 
-#card__heading {
-  margin-top: 10px;
-}
-
-.cards {
-  height: 13em;
-  width: 10em;
-  border-radius: 10px;
-  margin: 20px auto 20px auto;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  background: #d1913c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffd194,
-    #d1913c
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffd194,
-    #d1913c
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  cursor: pointer;
-}
-
-.cards:hover {
-  transition: 0.1s;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.adjust {
-  height: 90%;
-}
-
-.extra-info {
-  text-align: left;
-  height: 30%;
-  width: 100%;
-  padding-left: 5%;
-  padding-top: 10px;
-  margin-top: 81%;
-}
-
-footer {
-  grid-area: "footer";
-  width: 100%;
-  text-align: center;
-}
-
-@media only screen and (min-width: 600px) {
-  #full__window {
-    /* border: 1px solid black; */
-    margin-top: 40px;
-    display: flex;
-  }
-  .cards {
-    /* border: 1px solid black; */
-    width: 12em;
-    height: 15em;
+@media only screen and (max-width: 700px) {
+  main {
+    width: 90%;
   }
 }
