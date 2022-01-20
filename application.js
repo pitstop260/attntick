@@ -1,11 +1,11 @@
 "use strict";
 
 const students = new Map([
-  [1, ["PAVAN", "2SD19EC001"]],
-  [2, ["ANIRUDH", "2SD19EC111"]],
-  [3, ["akshay", "2SD19EC111"]],
-  [4, ["sudeep", "2SD19EC111"]],
-  [5, ["kiran", "2SD19EC111"]],
+  [1, ["PAV", "001"]],
+  [2, ["ANI", "002"]],
+  [3, ["alex", "003"]],
+  [4, ["sam", "004"]],
+  [5, ["kyle", "005"]],
 ]);
 
 const days = ["MONDAY", "THURSDAY", "FRIDAY"];
